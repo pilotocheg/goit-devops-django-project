@@ -22,9 +22,9 @@ spec:
   }
 
   environment {
-    ECR_REGISTRY = "683210040028.dkr.ecr.eu-central-1.amazonaws.com/terraform-demo-ecr"
-    IMAGE_NAME   = "django-app"
-    IMAGE_TAG    = "latest"
+    ECR_REGISTRY = "683210040028.dkr.ecr.eu-central-1.amazonaws.com"
+    ECR_REPO     = "terraform-demo-ecr"
+    IMAGE_TAG    = "django-app-latest"
   }
 
   stages {
@@ -35,8 +35,7 @@ spec:
             /kaniko/executor \\
               --context `pwd`/django \\
               --dockerfile `pwd`/django/Dockerfile \\
-              --destination=$ECR_REGISTRY/$IMAGE_NAME:$IMAGE_TAG \\
-              --cache=true
+              --destination=$ECR_REGISTRY/$ECR_REPO:$IMAGE_TAG
           '''
         }
       }
