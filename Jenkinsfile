@@ -31,7 +31,7 @@ spec:
     ECR_REPO      = "terraform-demo-ecr"
     IMAGE_TAG     = "django-app-${BUILD_NUMBER}"
     GITOPS_REPO   = "github.com/pilotocheg/goit-devops-hw.git"
-    GITOPS_BRANCH = "lesson-8-9"
+    GITOPS_BRANCH = "main"
     CHART_VALUES  = "charts/django-app/values.yaml"
     COMMIT_EMAIL  = "jenkins@ci.local"
     COMMIT_NAME   = "Jenkins CI"
