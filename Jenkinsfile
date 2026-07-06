@@ -70,7 +70,7 @@ spec:
               if git diff --cached --quiet; then
                 echo "No tag change; nothing to commit."
               else
-                git commit -m "ci: update django-app image tag to $IMAGE_TAG"
+                git commit -m "ci: update django-app image tag to $IMAGE_TAG [skip ci]"
                 git push origin "$GITOPS_BRANCH"
               fi
             '''
